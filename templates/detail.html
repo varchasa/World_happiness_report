@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>World Happiness Report</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">World Happiness Report</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/detail">Analysis</a>
+      </li>
+    </ul>
+  </div>
+    </nav><br>
+
+<center>
+    <div class="card" style="width: 20rem;">
+      <div class="card-header">
+        Factors
+      </div><br>
+      <ul class="list-group list-group-flush">
+        <form action ="{{ url_for('score')}}">
+          <button type="button" class="btn btn-warning">Score</button></form><br>
+
+        <form action ="{{ url_for('gdp')}}">
+          <button type="button" class="btn btn-secondary">GDP per capita</button></form><br>
+
+        <form action ="{{ url_for('social')}}">
+          <button type="button" class="btn btn-success">Social support</button></form><br>
+
+        <form action ="{{ url_for('freedom')}}">
+          <button type="button" class="btn btn-light">Freedom to make life choices</button></form><br>
+
+        <form action ="{{ url_for('generosity')}}">
+          <button type="button" class="btn btn-info">Generosity</button></form><br>
+
+        <form action ="{{ url_for('perceptions')}}">
+          <button type="button" class="btn btn-danger">Perceptions of corruptions</button></form>
+
+      </ul>
+    </div>
+
+  </center>
+  
+
+
+
+
+
+</body>
+</html>
