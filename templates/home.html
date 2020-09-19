@@ -1,21 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<!------------------ libabries ----------->
 <head>
-  <title></title>
-
-  <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='/css/styles.css') }}">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src=  "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">   </script>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|Merienda One|Capriola|Source Code Pro">
+    <title>World Happiness Report</title>
+    <style>
+p{
+  font-family: "Source Code Pro"
+}
+li{
+  font-family: "Source Code Pro"
+}
+      </style>
 </head>
 <body>
-    <div>
-        <form action ="{{ url_for('Analysis')}}">
-            <input type="submit" class="btn btn-dark" value="Analysis" target="_blank" name="Analysis" >
-        </form>
-    </body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">World Happiness Report</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Analysis</a>
+      </li>
+    </ul>
+  </div>
+    </nav>
+    
+    <div class="container">
+      <div class="jumbotron">
+      <div style="width: 100%;">
+        <br><br>
+        <!--<center style="padding-top: 50px; color:gray;">--><p>
+          <H1 style="font-family:Sofia "> About:</H1>
+        <p>The World Happiness Report is an annual publication of the United Nations Sustainable Development Solutions Network. It contains articles, and rankings of national happiness based on respondent ratings of their own lives, which the report also correlates with various life factors. </p>
+        
+      </div></div>
+
+      <div style="padding-top: 30px;">
+        <h2 style="font-family: Merienda One;">Analysis :</h3>
+          <p style="padding-top: 20px;" >
+            Analysis has been done on the basis of the report 2019. The data has been described on the basis on various factors like score of each country, .....
+          <br>
+          Now you can watch the analysis based on every parameter. Just have a look below. 
+
+        </p>
+        
+          <form action ="{{ url_for('Analysis')}}">
+          <input type="submit" class="btn btn-warning btn-block" value="Analysis" target="_blank" name="Analysis" >
+          </form>
+      </div>
+
+      <div style="padding-top: 30px;">
+        <h3>Research Work :</h3>
+        <br>
+        <h5>The Top 20 happiest countries include:</h5> 
+          
+          <ol>
+            <li>Finland</li>
+            <li>Denmark</li>
+            <li>Switzerland</li>
+            <li>Iceland</li>
+            <li>Norway</li>
+            <li>The Netherlands</li>
+            <li>Sweden</li>
+            <li>New Zealand</li>
+            <li>Luxembourg</li>
+            <li>Austria</li>
+            <li>Canada</li>
+            <li>Australia</li>
+            <li>UK</li>
+            <li>Isreal</li>
+            <li>Costa Rica</li>
+            <li>Ireland</li>
+            <li>Germany</li>
+            <li>US</li>
+            <li>Czech Republic</li>
+            <li>Belgium</li>
+          </ol>
+      </div>
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src=  "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+</body>
 </html>
